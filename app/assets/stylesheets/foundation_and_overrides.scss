@@ -1157,7 +1157,7 @@ $em-base: 16px !default;
 
 // Background color for the top bar
 
-// $topbar-bg: #111;
+$topbar-bg: #fff;
 
 // Height and margin
 
@@ -1175,15 +1175,15 @@ $em-base: 16px !default;
 
 // Link colors and styles for top-level nav
 
-// $topbar-link-color: #fff;
+$topbar-link-color: #333;
 // $topbar-link-weight: bold;
 // $topbar-link-font-size: emCalc(13px);
 // $topbar-link-hover-lightness: -30% !default; // Darken by 30%
 
 // Top bar dropdown elements
 
-// $topbar-dropdown-bg: #333;
-// $topbar-dropdown-link-color: #fff;
+$topbar-dropdown-bg: #fff;
+$topbar-dropdown-link-color: #333;
 // $topbar-dropdown-toggle-size: 5px;
 // $topbar-dropdown-toggle-color: #fff;
 // $topbar-dropdown-toggle-alpha: 0.5;
@@ -1194,8 +1194,8 @@ $em-base: 16px !default;
 // $topbar-menu-link-transform: uppercase;
 // $topbar-menu-link-font-size: emCalc(13px);
 // $topbar-menu-link-weight: bold;
-// $topbar-menu-link-color: #fff;
-// $topbar-menu-icon-color: #fff;
+$topbar-menu-link-color: #333;
+$topbar-menu-icon-color: #333;
 // $topbar-menu-link-color-toggled: #888;
 // $topbar-menu-icon-color-toggled: #888;
 
@@ -1206,6 +1206,12 @@ $em-base: 16px !default;
 // $topbar-media-query: "only screen and (min-width: "#{$topbar-breakpoint}")";
 
 @import 'foundation';
+
 .row {
   max-width: 70em;
 }
+
+body {
+  background: #edf1f2;
+}
+
