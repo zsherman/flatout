@@ -1,8 +1,18 @@
-<div class="row">
-  <div class="large-3 column"></div>
-  <div class="large-9 column">
-    <div class="row"></div>
-    <div class="row"></div>
-    <div class="row"></div>
+<div id="home">
+  <div class="row">
+    <div class="large-3 column">
+      <ul class="side-nav">
+        <li class="active"><a href="#">Link 1</a></li>
+        <li><a href="#">Link 2</a></li>
+        <li class="divider"></li>
+        <li><a href="#">Link 3</a></li>
+        <li><a href="#">Link 4</a></li>
+      </ul>
+    </div>
+    <div class="large-9 column">
+      <% 5.times do %>
+        <div class="row exercise">Exercise</div>
+      <% end %>
+    </div>
   </div>
 </div>

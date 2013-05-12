@@ -6,7 +6,14 @@
 
 // Home styles
 div {
-  border: 1px solid #000;
+  border: 1px solid #ccc;
 }
+
+#home {
+  .exercise {
+    height: 100px;
+  }
+}
+
 
 

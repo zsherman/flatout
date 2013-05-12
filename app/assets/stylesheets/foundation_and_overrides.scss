@@ -1206,3 +1206,6 @@ $em-base: 16px !default;
 // $topbar-media-query: "only screen and (min-width: "#{$topbar-breakpoint}")";
 
 @import 'foundation';
+.row {
+  max-width: 70em;
+}
