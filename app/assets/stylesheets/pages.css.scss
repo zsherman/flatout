@@ -14,8 +14,71 @@ div {
     height: 100px;
   }
 
-  header {
-  	height: 100px;
+  .top {
+    background: #FFF;
+
+  	h1 {
+      font-size: 30px;
+      font-weight: bold;
+      color: #545862;
+      padding: 15px 20px;
+      float: left;
+    }
+
+    .start {
+      float: right;
+      background: #28BFA4;
+      color: #FFF;
+      padding: 15px 60px;
+      border-radius: 3px;
+      border-bottom: 5px solid #1E8A76;
+      margin-top: 20px;
+
+      &:active {
+
+      }
+    }
+
+    .add {
+      float: right;
+      background: #42444e;
+      color: #FFF;
+      padding: 15px 63px;
+      border-radius: 3px;
+      border-bottom: 5px solid #32333a;
+      margin-top: 20px;
+      margin-right: 10px;
+
+      &:active {
+
+      }
+    }
+    @media only screen and (max-width: 520px) {
+      .menu {
+        text-align: center;
+      }
+
+      h1 {
+        float: none;
+        text-align: center;
+      }
+
+      .start {
+        display: block;
+        clear: left;
+        float: none;
+        margin-top: 5px;
+      }
+
+      .add {
+        display: block;
+        margin-top: 5px;
+        margin-right: 0px;
+        margin-bottom: 10px;
+        float: none;
+        clear: left;
+      }
+    }
   }
 
   .side-nav {
