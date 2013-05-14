@@ -11,7 +11,48 @@ div {
 
 #home {
   .exercise {
-    height: 100px;
+    min-height: 90px;
+    background: #fff;
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+    .cover-image {
+      width: 100px;
+      height: 100px;
+      margin: 10px 15px 10px 10px;
+      background: url('weight.png');
+      float: left;
+    }
+
+    h2 {
+      font-size: 28px;
+      display: inline;
+    }
+
+    p {
+      font-size: 14px;
+      width: 60%;
+      display: block;
+      font-size: 14px;
+      float: left;
+    }
+
+    .sets, .reps {
+      float: right;
+      height: 90px;
+      width: 75px;
+      background: #edf1f2;
+      margin: 3px;
+      margin-top: 15px;
+      margin-right: 10px;
+      @include border-radius(3px);
+      text-align: center;
+
+      h1 {
+        color: #545862;
+        //font-size:
+      }
+    }
   }
 
   .top {
@@ -21,8 +62,9 @@ div {
       font-size: 30px;
       font-weight: bold;
       color: #545862;
-      padding: 15px 20px;
+      padding: 5px 20px;
       float: left;
+      margin-top: 10px;
     }
 
     .start {
@@ -32,7 +74,7 @@ div {
       padding: 15px 60px;
       border-radius: 3px;
       border-bottom: 5px solid #1E8A76;
-      margin-top: 20px;
+      margin-top: 13px;
 
       &:active {
 
@@ -46,7 +88,7 @@ div {
       padding: 15px 63px;
       border-radius: 3px;
       border-bottom: 5px solid #32333a;
-      margin-top: 20px;
+      margin-top: 13px;
       margin-right: 10px;
 
       &:active {
