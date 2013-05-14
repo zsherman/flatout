@@ -47,10 +47,18 @@ div {
       margin-right: 10px;
       @include border-radius(3px);
       text-align: center;
+      padding-top: 5px;
 
       h1 {
         color: #545862;
+        margin-top: 0px;
         //font-size:
+      }
+
+      span {
+        font-size: 13px;
+        font-weight: 500;
+        color: #37373A;
       }
     }
   }
