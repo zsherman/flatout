@@ -6,7 +6,7 @@
 
 // Home styles
 div {
-  border: 1px solid #ccc;
+  //border: 1px solid #ccc;
 }
 
 #home {
@@ -17,6 +17,86 @@ div {
   header {
   	height: 100px;
   }
+
+  .side-nav {
+    a {
+      color: #afb6bf;
+      font-weight: bold;
+
+      &:hover {
+        color: #28bfa4;
+      }
+    }
+
+    .active a {
+      color: #545862;
+    }
+
+    i {
+      height: 16px;
+      width: 16px;
+      background: url('flat-sprites.png');
+      float: left;
+      margin-top: 3px;
+      margin-right: 5px;
+    }
+
+    .dashboard {
+      i {
+        background-position: 0px 0px;
+      }
+    }
+
+    .activity {
+      i {
+        background-position: 34px -16px;
+      }
+
+      &:hover {
+        i {
+          background-position: 68px -16px;
+        }
+      }
+    }
+
+    .settings {
+      i {
+        background-position: 34px 54px;
+      }
+
+      &:hover {
+        i {
+          background-position: 68px 54px;
+        }
+      }
+    }
+
+    .routine {
+      i {
+        background-position: 34px 35px;
+      }
+
+      &:hover {
+        i {
+          background-position: 68px 35px;
+        }
+      }
+    }
+
+    .add-new {
+      i {
+        background-position: 34px 16px;
+      }
+
+      &:hover {
+        i {
+          background-position: 68px 16px;
+        }
+      }
+    }
+
+  }
+
 }
 
 
