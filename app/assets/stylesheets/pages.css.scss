@@ -64,10 +64,32 @@ div {
 
     @media only screen and (max-width: 620px) {
       text-align: center;
-      
+
       .cover-image {
         margin: 0 auto;
         float: none;
+      }
+
+      p {
+        width: 80%;
+        margin: 0 auto;
+        padding-left: 0px;
+      }
+
+      h2 {
+        display: block;
+      }
+
+      .sets, .reps {
+        width: 50px;
+        height: 50px;
+        float: none;
+        margin: 0 auto;
+        display: inline-block;
+
+        h1 {
+          font-size: 20px;
+        }
       }
     }
   }
@@ -92,9 +114,11 @@ div {
       border-radius: 3px;
       border-bottom: 5px solid #1E8A76;
       margin-top: 13px;
+      position: relative;
 
       &:active {
-
+        border-bottom: 2px solid #1E8A76;
+        top: 3px;
       }
     }
 
@@ -107,9 +131,11 @@ div {
       border-bottom: 5px solid #32333a;
       margin-top: 13px;
       margin-right: 10px;
+      position: relative;
 
       &:active {
-
+        border-bottom: 2px solid #32333a;
+        top: 3px;
       }
     }
     @media only screen and (max-width: 520px) {
@@ -141,6 +167,12 @@ div {
   }
 
   .side-nav {
+
+    li:hover {
+      //background: #F8FBFC;
+      @include border-radius(5px);
+    }
+
     a {
       color: #afb6bf;
       font-weight: bold;
