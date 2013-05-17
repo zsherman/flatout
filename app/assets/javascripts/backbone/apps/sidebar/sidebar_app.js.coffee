@@ -1,9 +1,6 @@
 @Flatout.module "SidebarApp", (SidebarApp, App, Backbone, Marionette, $, _) ->
-  @startWithParent = false
+  #@startWithParent = false
 
   API =
-    showSidebar ->
+    showSidebar: ->
       SidebarApp.Show.Controller.showSidebar()
-
-
-      #14:30 on bitcast
