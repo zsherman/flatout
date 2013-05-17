@@ -9,6 +9,10 @@ console.log(this)
     headerRegion: "#header-region"
     exerciseRegion: "#exercise-region"
 
+  App.addInitializer ->
+    App.module("SidebarApp").start()
+    App.module("HeaderApp").start()
+
   App.on "initialize:after", ->
     if Backbone.history
       Backbone.history.start()

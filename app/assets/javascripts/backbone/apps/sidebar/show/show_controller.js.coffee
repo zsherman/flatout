@@ -3,4 +3,8 @@
   Show.Controller =
 
     showSidebar: ->
-      console.log("inside show sidebar")
+      sidebarView = @getSidebarView()
+      App.sidebarRegion.show sidebarView
+
+    getSidebarView: ->
+      new Show.Sidebar
