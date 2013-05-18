@@ -334,5 +334,42 @@ div {
 
 }
 
+#exercises {
+  .columns {
+    padding: 0px 8px;
+  }
+  .exercise {
+    height: 250px;
+    background: #fff;
+    //width: 33.3%;
+    //border: 8px solid #EDF1F2;
 
+    .top {
+      height: 70%;
+      background: #28bfa4;
+    }
+  }
+
+  @media only screen and (max-width: 1000px) {
+    .exercise {
+      .small-5 {
+        //width: 33.3%;
+      }
+    }
+  }
+}
+
+#workouts {
+
+  .workout {
+    height: 175px;
+    background: #fff;
+    margin-bottom: 20px;
+  }
+
+}
+
+#builder {
+
+}
 
