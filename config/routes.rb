@@ -1,8 +1,7 @@
 Flatout::Application.routes.draw do
-
+  root :to => 'application#index'
+  match "/*path" => "application#index"
   devise_for :users
-
-  root :to => "pages#home"
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

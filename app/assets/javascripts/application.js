@@ -13,6 +13,11 @@
 //= require jquery
 //= require jquery_ujs
 //= require foundation
-//= require_tree .
+//= require handlebars
+//= require ember
+//= require ember-data
+//= require_self
+//= require flatout
+Flatout = Ember.Application.create();
 
 $(function(){ $(document).foundation(); });

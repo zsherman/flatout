@@ -146,6 +146,7 @@ DEPENDENCIES
   devise
   ember-rails
   jquery-rails
+  json (~> 1.7.7)
   rails (= 3.2.13)
   sass-rails (~> 3.2.3)
   sqlite3
