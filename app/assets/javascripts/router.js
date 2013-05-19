@@ -5,3 +5,4 @@ Flatout.Router.map(function(match){
   this.route("workouts", { path: "/workouts" });
 })
 
+
