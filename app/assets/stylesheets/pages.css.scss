@@ -267,6 +267,12 @@ div {
       color: #545862;
     }
 
+    a.editing {
+      border: 1px solid #ccc;
+      margin-left: 18px;
+      border-radius: 3px;
+    }
+
     i {
       height: 16px;
       width: 16px;
@@ -330,6 +336,58 @@ div {
       }
     }
 
+  }
+
+}
+
+#exercises {
+  
+  .columns {
+    padding: 0px 8px;
+  }
+  
+  .exercise {
+    height: 250px;
+    background: #fff;
+    text-align: center;
+    margin-bottom: 15px;
+    //width: 33.3%;
+    //border: 8px solid #EDF1F2;
+
+    section.top {
+      height: 70%;
+      background: #73d2b9;
+    }
+
+    h2 {
+      font-family: 'proxima-nova', 'helvetica-neue';
+      font-size: 18px;
+      color: #393D3C;
+      margin-top: 24px;
+      font-weight: 500;
+    }
+
+    .top {
+      height: 70%;
+      background: #000;
+    }
+  }
+
+  @media only screen and (max-width: 1000px) {
+    .exercise {
+      .small-5 {
+        //width: 33.3%;
+      }
+    }
+  }
+}
+
+#workouts {
+
+  .workout {
+    height: 175px;
+    background: #fff;
+    margin-bottom: 20px;
   }
 
 }
