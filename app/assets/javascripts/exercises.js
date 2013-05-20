@@ -14,11 +14,11 @@ $(function() {
 		$active.next('li').addClass('active');
 	})
 
-	// $('.routine a.restart').click(function(e) {
-	// 	e.preventDefault();
-	// 	$(this).removeClass('active');
-	// 	$('.routine li').first().addClass('active');
-	// })
+	$('.routine a.restart').click(function(e) {
+		e.preventDefault();
+		$(this).parent('li').removeClass('active');
+		$('.routine li').first().addClass('active');
+	})
 
 
 });
