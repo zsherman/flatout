@@ -7,33 +7,13 @@
         <li class="settings"><i></i><a href="#">Settings</a></li>
         <li class="divider"></li>
         <% @routines.each do |r| %>
-          <li class="routine"><i></i><a href="#"><%= r.name %></a></li>
+          <li class="routine" data-id="<%= r.id %>"><i></i><a href="#"><%= r.name %></a></li>
         <% end %>
         <li class="add-new"><i></i><a href="#">Add New</a></li>
       </ul>
     </div>
-    <div class="large-13 column">
-      <div class="row top" id="header-region">
-        <div class="large 16 column menu">
-          <h1>Strength</h1>
-          <ul class="group">
-            <!-- <li><a href="#" class="day">Day</a></li> -->
-            <li><a href="/exercises" class="add">Add</a></li>
-            <li><%= link_to "Start", start_path(@routine), :class => "start" %><!-- <a href="#" class="start">Start</a> --></li>
-          </ul>
-        </div>
-      </div>
-      <div id="exercise-region">
-        <% @exercises.each do |e| %>
-          <div class="row exercise">
-            <div class="cover-image"></div>
-            <div class="reps"><span>Reps</span><h1><%= e.reps %></h1></div>
-            <div class="sets"><span>Sets</span><h1><%= e.sets %></h1></div>
-            <h2><%= e.name %></h2>
-            <p>For a big chest, the best things you can do are heavy compound (multi-joint) movements. No matter if you're hitting a flat bench or an incline bench with dumbbells, you have to put extreme stress on the muscle fibers to make them grow.</p>
-          </div>
-        <% end %>
-      </div>
+    <div class="large-13 column" id="exercise-list">
+      <%= render 'exercise_list' %>
     </div>
   </div>
 </div>

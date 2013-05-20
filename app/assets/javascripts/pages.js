@@ -72,6 +72,20 @@ $(function() {
 		//return false;
 	});
 
+	$('.routine a').click(function(e) {
+		e.preventDefault();
+		var id = $(this).parent('li').attr('data-id');
+		var url = "/routines/" + id + "/list"
+		$.get(url,
+		  {},
+		  function(data) {
+		    $("#exercise-list").empty();
+		    $("#exercise-list").append(data.html);
+		  }
+		);
+		window.location.href="#exercise-list";
+	});
+
 
 
 
