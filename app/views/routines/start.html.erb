@@ -1,8 +1,22 @@
 <div class="row" id="start-routine">
     <div class="large-8 small-12 small-centered columns routine">
-      <h1><%= @routine.name %></h1>
-      <div class="routine-img"></div>
-      <a href="#">Start</a>
+    	<ul class="routine-list">
+    		<li class="intro active">
+    			<h1>Intro</h1>
+    			<a href="#" class="start next">Start</a>
+    		</li>
+    		<% @exercises.each do |exercise| %>
+	    		<li>
+			      <h1><%= exercise.name %></h1>
+			      <div class="routine-img"></div>
+			      <a href="#" class="next">Next</a>
+			    </li>
+				<% end %>
+				<li class="end">
+    			<h1>Finished!</h1>
+    			<div class="routine-img"></div>
+    			<a href="#" class="restart">Restart</a>
+    		</li>
+	     </ul>
     </div>
-
 </div>

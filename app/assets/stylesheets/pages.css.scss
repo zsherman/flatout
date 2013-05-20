@@ -387,11 +387,9 @@ div {
     }
   }
 
-  @media only screen and (max-width: 1000px) {
-    .exercise {
-      .small-5 {
-        //width: 33.3%;
-      }
+  @media only screen and (max-width: 350px) {
+    .small-8 {
+      width: 100%;
     }
   }
 }
@@ -412,6 +410,39 @@ div {
     height: 500px;
     background: #fff;
     text-align: center;
+
+    ul {
+      list-style: none;
+
+      li {
+        display: none;
+        // position: absolute; 
+        // top: 0; 
+        // left: 0;
+      }
+
+      li.active {
+        display: inline-block;
+      }
+
+      li.intro {
+
+      }
+
+      li.exercise {
+        
+      }
+
+      li.end {
+        .routine-img {
+          background: url("http://dribbble.s3.amazonaws.com/users/2761/screenshots/854172/screen_shot_2012-12-11_at_4.59.43_pm_1x.png");
+          background-size: 120%;
+          background-repeat: no-repeat;
+          width: 300px;
+          background-position: -35px;
+        }
+      }
+    }
 
     .routine-img {
       height: 150px;
