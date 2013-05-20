@@ -27,14 +27,19 @@ div {
     h2 {
       font-size: 28px;
       display: inline;
+      font-family: 'proxima-nova', 'helvetica-neue';
+      color: #363945;
     }
 
     p {
       font-size: 14px;
       display: block;
       font-size: 14px;
-      padding-left: 130px;
+      padding-left: 127px;
       max-width: 78%;
+      font-size: 14px;
+      font-family: 'proxima-nova', 'helvetica-neue';
+      color: #7C858E;
     }
 
     .sets, .reps {
@@ -355,7 +360,7 @@ div {
     //border: 8px solid #EDF1F2;
 
     section.top {
-      height: 70%;
+      height: 3%; //70%;
       background: #73d2b9;
       //background: url('http://dribbble.s3.amazonaws.com/users/301148/screenshots/1071001/screen_shot_2013-05-15_at_9.21.34_am.png');
       background-size: 100%;
@@ -365,9 +370,15 @@ div {
     h2 {
       font-family: 'proxima-nova', 'helvetica-neue';
       font-size: 18px;
-      color: #393D3C;
+      color: #363945;
       margin-top: 24px;
       font-weight: 500;
+    }
+
+    p {
+      font-size: 14px;
+      font-family: 'proxima-nova', 'helvetica-neue';
+      color: #7C858E;
     }
 
     .top {
@@ -402,9 +413,32 @@ div {
     background: #fff;
     text-align: center;
 
+    .routine-img {
+      height: 150px;
+      width: 100px;
+      background: url('http://dribbble.s3.amazonaws.com/users/255/screenshots/787169/yoda.gif');
+      height: 275px;
+      margin: 0 auto;
+      background-position: -20px;
+      background-repeat: no-repeat;
+      width: 300px;
+      background-size: 120%;
+      background-position: -27px;
+    }
+
     h1 {
       font-family: "proxima-nova";
       color: #333;
+      margin-bottom: 0px;
+    }
+
+    a {
+      color: #fff;
+      padding: 15px 100px;
+      margin-top: 30px;
+      display: inline-block;
+      background: #28bfa4;
+      @include border-radius(3px);
     }
   }
   @media only screen and (max-width: 400px) {

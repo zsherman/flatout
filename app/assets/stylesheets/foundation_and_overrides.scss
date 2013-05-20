@@ -1175,10 +1175,10 @@ $topbar-bg: #fff;
 
 // Link colors and styles for top-level nav
 
-$topbar-link-color: #333;
+$topbar-link-color: #9BA4AD; // was #333
 // $topbar-link-weight: bold;
 // $topbar-link-font-size: emCalc(13px);
-// $topbar-link-hover-lightness: -30% !default; // Darken by 30%
+$topbar-link-hover-lightness: -10% !default; // Darken by 30%
 
 // Top bar dropdown elements
 
@@ -1194,8 +1194,8 @@ $topbar-dropdown-link-color: #333;
 // $topbar-menu-link-transform: uppercase;
 // $topbar-menu-link-font-size: emCalc(13px);
 // $topbar-menu-link-weight: bold;
-$topbar-menu-link-color: #333;
-$topbar-menu-icon-color: #333;
+$topbar-menu-link-color: #9BA4AD; // was #333
+$topbar-menu-icon-color: #9BA4AD; // was #333
 // $topbar-menu-link-color-toggled: #888;
 // $topbar-menu-icon-color-toggled: #888;
 

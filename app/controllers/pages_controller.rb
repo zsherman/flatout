@@ -8,4 +8,8 @@ class PagesController < ApplicationController
     @exercises = @routine.exercises
   end
 
+  def exercises
+    @exercises = Exercise.all
+  end
+
 end
