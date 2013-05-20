@@ -3,6 +3,8 @@ Flatout::Application.routes.draw do
   devise_for :users
 
   root :to => "pages#home"
+  resources :routines
+  match 'routines/:id/start', to: 'routines#start', :as => 'start'
   match '/exercises' => "pages#exercises"
   match '/workouts' => "pages#workouts"
   # The priority is based upon order of creation:

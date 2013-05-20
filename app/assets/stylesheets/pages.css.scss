@@ -341,11 +341,11 @@ div {
 }
 
 #exercises {
-  
+
   .columns {
     padding: 0px 8px;
   }
-  
+
   .exercise {
     height: 250px;
     background: #fff;
@@ -357,6 +357,9 @@ div {
     section.top {
       height: 70%;
       background: #73d2b9;
+      //background: url('http://dribbble.s3.amazonaws.com/users/301148/screenshots/1071001/screen_shot_2013-05-15_at_9.21.34_am.png');
+      background-size: 100%;
+      //border-bottom: 1px solid #CCC;
     }
 
     h2 {
@@ -390,6 +393,28 @@ div {
     margin-bottom: 20px;
   }
 
+}
+
+#start-routine {
+
+  .routine {
+    height: 500px;
+    background: #fff;
+    text-align: center;
+
+    h1 {
+      font-family: "proxima-nova";
+      color: #333;
+    }
+  }
+  @media only screen and (max-width: 400px) {
+    width: 100%;
+    margin-top: -36px;
+    .routine {
+      height: 433px;
+      width: 100%;
+    }
+  }
 }
 
 

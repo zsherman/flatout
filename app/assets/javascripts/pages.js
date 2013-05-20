@@ -33,7 +33,16 @@ $(function() {
 		$('.routine a.editing').keypress(function(e) {
 			if(e.which == 13) {
 				$(this).attr('contentEditable', false).removeClass('editing');
-				// Persist routine
+				var name = $(this).text();
+				$.ajax({
+			    url: "/routines",
+			    type: "POST",
+			    data: { name: name },
+			    success: function(resp){
+			    	console.log(resp);
+			    	console.log('it worked');
+			    }
+				});
 			};
 		});
 
@@ -55,7 +64,7 @@ $(function() {
 			});
 
 		});
-		return false;
+		//return false;
 	});
 
 	$('.routine a.editing').click(function(e){
