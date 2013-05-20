@@ -426,7 +426,15 @@ div {
       }
 
       li.intro {
+        ul {
+          margin-left: 0px;
+          list-style-type: disc; 
+          list-style-position: inside;
 
+          li {
+            display: block;
+          }
+        }
       }
 
       li.exercise {

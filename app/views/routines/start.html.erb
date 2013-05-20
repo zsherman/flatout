@@ -2,7 +2,12 @@
     <div class="large-8 small-12 small-centered columns routine">
     	<ul class="routine-list">
     		<li class="intro active">
-    			<h1>Intro</h1>
+    			<h1><%= @routine.name %></h1>
+    			<ul>
+    				<% @exercises.each do |exercise| %>
+    					<li><%= exercise.name %></li>
+    				<% end %>
+    			</ul>
     			<a href="#" class="start next">Start</a>
     		</li>
     		<% @exercises.each do |exercise| %>
