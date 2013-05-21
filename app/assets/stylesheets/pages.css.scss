@@ -447,9 +447,37 @@ div {
 
       li {
         display: none;
+        width: 100%;
         // position: absolute;
         // top: 0;
         // left: 0;
+
+        .rep-container {
+          display: block;
+          text-align: center;
+        }
+
+        .sets, .reps {
+          display: inline-block;
+          height: 60px;
+          width: 50px;
+          background: #edf1f2;
+          margin: 3px;
+          margin-top: 15px;
+          margin-right: 10px;
+          @include border-radius(3px);
+          text-align: center;
+          padding-top: 2px;
+
+          h1 {
+            font-size: 25px;
+            margin-top: 0px;
+          }
+
+          span {
+            font-size: 14px;
+          }
+        }
       }
 
       li.active {
@@ -477,17 +505,16 @@ div {
           background: url("http://dribbble.s3.amazonaws.com/users/2761/screenshots/854172/screen_shot_2012-12-11_at_4.59.43_pm_1x.png");
           background-size: 120%;
           background-repeat: no-repeat;
+          height: 260px;
           width: 300px;
-          background-position: -35px;
+          background-position: -35px 0px;
         }
       }
     }
 
     .routine-img {
-      height: 150px;
-      width: 100px;
       background: url('http://dribbble.s3.amazonaws.com/users/255/screenshots/787169/yoda.gif');
-      height: 275px;
+      height: 240px;
       margin: 0 auto;
       background-position: -20px;
       background-repeat: no-repeat;
@@ -498,9 +525,9 @@ div {
 
     .routine-img.rest {
       background: url('http://dribbble.s3.amazonaws.com/users/90917/screenshots/913059/lovetheburnsmall.jpg');
-      background-size: 120%;
+      background-size: 110%;
       background-repeat: no-repeat;
-      background-position: -30px 12px;
+      background-position: -15px 12px;
     }
 
     .routine-img.start {
@@ -521,7 +548,7 @@ div {
     a {
       color: #fff;
       padding: 15px 100px;
-      margin-top: 30px;
+      margin-top: 10px;
       display: inline-block;
       background: #28bfa4;
       @include border-radius(3px);
@@ -531,7 +558,7 @@ div {
     width: 100%;
     margin-top: -36px;
     .routine {
-      height: 433px;
+      height: 440px;
       width: 100%;
     }
   }
