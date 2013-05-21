@@ -20,5 +20,14 @@ $(function() {
 		$('.routine li').first().addClass('active');
 	})
 
+	$('.exercise-container .exercise').hover(
+		function() {
+			$(this).children('.exercise-content-wrapper').animate({"top":"-193px"}, 400);
+		},
+		function() {
+			$(this).children('.exercise-content-wrapper').animate({"top":"0px"}, 400);
+		}
+	);
+
 
 });

@@ -351,27 +351,50 @@ div {
     padding: 0px 8px;
   }
 
+  .exercise-container {
+    float: left;
+  }
+
   .exercise {
     height: 250px;
     background: #fff;
     text-align: center;
     margin-bottom: 15px;
+    overflow: hidden;
     //width: 33.3%;
     //border: 8px solid #EDF1F2;
 
-    section.top {
+    .exercise-content-wrapper {
+      height: 250px;
+      position: relative;
+    }
+
+    .top-color {
       height: 3%; //70%;
       background: #73d2b9;
-      //background: url('http://dribbble.s3.amazonaws.com/users/301148/screenshots/1071001/screen_shot_2013-05-15_at_9.21.34_am.png');
-      background-size: 100%;
-      //border-bottom: 1px solid #CCC;
+    }
+
+    section.top {
+      height: 77%; //70%;
+      background: #fff;
+
+      .exercise-image {
+        height: 100%;
+        width: 100%;
+        background: url('http://dribbble.s3.amazonaws.com/users/255/screenshots/787169/yoda.gif');
+        background-size: 100%;
+        background-size: 96%;
+        background-repeat: no-repeat;
+        background-position: 15px -5px;
+      }
     }
 
     h2 {
       font-family: 'proxima-nova', 'helvetica-neue';
       font-size: 18px;
       color: #363945;
-      margin-top: 24px;
+      margin-top: 12px;
+      //margin-bottom:
       font-weight: 500;
     }
 
@@ -390,6 +413,14 @@ div {
   @media only screen and (max-width: 350px) {
     .small-8 {
       width: 100%;
+    }
+
+    .exercise section.top {
+      height: 78%;
+
+      .exercise-image {
+        background-position: 15px -12px;
+      }
     }
   }
 }

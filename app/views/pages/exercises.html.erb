@@ -1,11 +1,16 @@
 <div class="row" id="exercises">
   <div class="large-16 columns">
-    <% 8.times do %>
-      <div class="large-4 small-8 columns">
+    <% @exercises.each do |exercise| %>
+      <div class="large-4 small-8 columns exercise-container">
         <div class="exercise">
-          <section class="top"></section>
-          <h2>Dumbell Straight Lifts</h2>
-          <p>They are the best exercises you can do and target your upper body, abs, lower pecks and upper qudorsinous muscles.</p>
+          <div class="exercise-content-wrapper">
+            <section class="top">
+              <div class="exercise-image"></div>
+            </section>
+            <div class="top-color"></div>
+            <h2><%= exercise.name %></h2>
+            <p>They are the best exercises you can do and target your upper body, abs, lower pecks and upper qudorsinous muscles.</p>
+          </div>
         </div>
       </div>
     <% end %>
