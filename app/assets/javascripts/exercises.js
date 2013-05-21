@@ -22,10 +22,10 @@ $(function() {
 
 	$('.exercise-container .exercise').hover(
 		function() {
-			$(this).children('.exercise-content-wrapper').animate({"top":"-193px"}, 400);
+			$(this).children('.exercise-content-wrapper').animate({"top":"-193px"}, 300);
 		},
 		function() {
-			$(this).children('.exercise-content-wrapper').animate({"top":"0px"}, 400);
+			$(this).children('.exercise-content-wrapper').animate({"top":"0px"}, 300);
 		}
 	);
 

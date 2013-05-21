@@ -496,6 +496,22 @@ div {
       background-position: -27px;
     }
 
+    .routine-img.rest {
+      background: url('http://dribbble.s3.amazonaws.com/users/90917/screenshots/913059/lovetheburnsmall.jpg');
+      background-size: 120%;
+      background-repeat: no-repeat;
+      background-position: -30px 12px;
+    }
+
+    .routine-img.start {
+      background: url('http://dribbble.s3.amazonaws.com/users/153946/screenshots/1069923/whistle-01.png');
+      background-size: 160%;
+      background-position: -60px -20px;
+      background-repeat: no-repeat;
+      height: 200px;
+      width: 200px;
+    }
+
     h1 {
       font-family: "proxima-nova";
       color: #333;

@@ -3,6 +3,7 @@
     	<ul class="routine-list">
     		<li class="intro active">
     			<h1><%= @routine.name %></h1>
+          <div class="routine-img start"></div>
     			<ul>
     				<% @exercises.each do |exercise| %>
     					<li><%= exercise.name %></li>
@@ -16,6 +17,11 @@
 			      <div class="routine-img"></div>
 			      <a href="#" class="next">Next</a>
 			    </li>
+          <li>
+            <h1>Rest</h1>
+            <div class="routine-img rest"></div>
+            <a href="#" class="next">Next</a>
+          </li>
 				<% end %>
 				<li class="end">
     			<h1>Finished!</h1>
