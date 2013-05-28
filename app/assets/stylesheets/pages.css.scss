@@ -381,11 +381,10 @@ div {
       .exercise-image {
         height: 100%;
         width: 100%;
-        background: url('http://dribbble.s3.amazonaws.com/users/255/screenshots/787169/yoda.gif');
-        background-size: 100%;
-        background-size: 96%;
+        background: url("https://dd5h05uy6fagm.cloudfront.net/assets/external-nav-customers-7f238e97ea8cd1a1dab332ccf33c7cc3.svg");
+        background-size: 60%;
         background-repeat: no-repeat;
-        background-position: 15px -5px;
+        background-position: 50px 20px;
       }
     }
 
@@ -393,9 +392,12 @@ div {
       font-family: 'proxima-nova', 'helvetica-neue';
       font-size: 18px;
       color: #363945;
-      margin-top: 12px;
-      //margin-bottom:
-      font-weight: 500;
+      font-weight: 600;
+      color: #FFF;
+      background: #73D2B9;
+      height: 50px;
+      margin-top: 0px;
+      padding-top: 10px;
     }
 
     p {
