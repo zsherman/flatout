@@ -22,12 +22,17 @@ $(function() {
 
 	$('.exercise-container .exercise').hover(
 		function() {
-			$(this).children('.exercise-content-wrapper').animate({"top":"-193px"}, 300);
+			$(this).children('.exercise-content-wrapper').animate({"top":"-242px"}, 300);
 		},
 		function() {
 			$(this).children('.exercise-content-wrapper').animate({"top":"0px"}, 300);
 		}
 	);
+
+	$('.show-list').click(function(e){
+		var exerciseName = $(this).parent().find('h2.exercise-name').text();
+		$('#exercise-modal h2').text(exerciseName);
+	});
 
 
 });

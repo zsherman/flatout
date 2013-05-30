@@ -4,6 +4,7 @@ Flatout::Application.routes.draw do
 
   root :to => "pages#home"
   resources :routines
+  resources :exercise_routines
   match 'routines/:id/start', to: 'routines#start', :as => 'start'
   match '/routines/:id/list', to: 'routines#render_partial', :as => 'list'
   match '/exercises' => "pages#exercises"

@@ -8,11 +8,23 @@
               <div class="exercise-image"></div>
             </section>
             <div class="top-color"></div>
-            <h2><%= exercise.name %></h2>
+            <h2 class="exercise-name"><%= exercise.name %></h2>
+            <h3><%= exercise.name %></h3>
             <p>They are the best exercises you can do and target your upper body, abs, lower pecks and upper qudorsinous muscles.</p>
+            <a href="#" data-reveal-id="exercise-modal" class="show-list">Add</a>
           </div>
         </div>
       </div>
     <% end %>
   </div>
+</div>
+<div id="exercise-modal" class="reveal-modal small">
+  <h2>Add this to a routine.</h2>
+  <p class="lead">Select which routines to add this exercise to.</p>
+  <ul>
+    <% current_user.routines.each do |routine| %>
+      <li><input type="checkbox"><%= routine.name %></input></li>
+    <% end %>
+  </ul>
+  <a class="close-reveal-modal">&#215;</a>
 </div>
