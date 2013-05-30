@@ -10,6 +10,7 @@ class PagesController < ApplicationController
 
   def exercises
     @exercises = Exercise.all
+    @routines = current_user.routines
   end
 
 end

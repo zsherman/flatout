@@ -31,7 +31,9 @@ $(function() {
 
 	$('.show-list').click(function(e){
 		var exerciseName = $(this).parent().find('h2.exercise-name').text();
+		var exerciseId = $(this).parent().attr('data-exercise-id');
 		$('#exercise-modal h2').text(exerciseName);
+		$('#exercise-modal #exercise_id').attr('value', exerciseId);
 	});
 
 
