@@ -1,0 +1,34 @@
+<div class="row" id="exercises">
+  <div class="large-16 columns">
+    <% @exercises.each do |exercise| %>
+      <div class="large-4 small-8 columns exercise-container">
+        <div class="exercise">
+          <div class="exercise-content-wrapper" data-exercise-id="<%= exercise.id %>">
+            <section class="top">
+              <div class="exercise-image"></div>
+            </section>
+            <div class="top-color"></div>
+            <h2 class="exercise-name"><%= exercise.name %></h2>
+            <h3><%= exercise.name %></h3>
+            <p>They are the best exercises you can do and target your upper body, abs, lower pecks and upper qudorsinous muscles.</p>
+            <a href="#" data-reveal-id="exercise-modal" class="show-list">Add</a>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
+<div id="exercise-modal" class="reveal-modal small">
+  <h2>Add this to a routine.</h2>
+  <p class="lead">Select which routines to add this exercise to.</p>
+    <%= form_tag batch_exercise_routines_path, method: :post do %>
+      <ul>
+        <% @routines.each do |routine| %>
+          <li><%= routine.name %><%= check_box_tag "routine_ids[]", routine.id %></li>
+        <% end %>
+      </ul>
+      <%= hidden_field_tag :exercise_id, 1 %>
+      <%= submit_tag "Submit" %>
+    <% end %>
+  <a class="close-reveal-modal">&#215;</a>
+</div>

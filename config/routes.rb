@@ -4,6 +4,7 @@ Flatout::Application.routes.draw do
 
   root :to => "pages#home"
   resources :routines
+  resources :exercises
   resources :exercise_routines do
     collection do
       post :batch
