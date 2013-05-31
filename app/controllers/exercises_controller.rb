@@ -18,6 +18,10 @@ class ExercisesController < ApplicationController
     end
   end
 
+  def edit
+    @exercise = Exercise.find(params[:id])
+  end
+
   def update
     @exercise = Exercise.find(params[:id])
     if @exercise.update_attributes(params[:exercise])
