@@ -14,7 +14,7 @@
     		<% @exercises.each do |exercise| %>
 	    		<li>
 			      <h1><%= exercise.name %></h1>
-			      <div class="routine-img"></div>
+			      <div class="routine-img" style="background:url('<%=exercise.img_url%>'); background-repeat: no-repeat; background-position: center;"></div>
               <div class="rep-container">
                 <div class="reps"><span>Reps</span><h1><%= exercise.reps %></h1></div>
                 <div class="sets"><span>Sets</span><h1><%= exercise.sets %></h1></div>
