@@ -1,0 +1,4 @@
+$('#edit-routine-modal form').remove();
+$('#edit-routine-modal').foundation('reveal', 'close');
+$('#header-region h1').text('<%= j @routine.name %>');
+$("li[data-id='<%= @routine.id %>'] a").text('<%= j @routine.name %>');

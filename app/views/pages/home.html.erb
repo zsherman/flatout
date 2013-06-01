@@ -9,11 +9,24 @@
         <% @routines.each do |r| %>
           <li class="routine" data-id="<%= r.id %>"><i></i><a href="#"><%= r.name %></a></li>
         <% end %>
-        <li class="add-new"><i></i><a href="#">Add New</a></li>
+        <li class="add-new"><i></i><%= link_to "Add New", new_routine_path, id: "new-routine", 'data-reveal-id' => "new-routine-modal", remote: true %></li>
       </ul>
     </div>
     <div class="large-13 column" id="exercise-list">
       <%= render 'exercise_list' %>
     </div>
   </div>
+</div>
+<div id="edit-routine-modal" class="reveal-modal small">
+  <h2>Edit this routine.</h2>
+  <a class="close-reveal-modal">&#215;</a>
+</div>
+<div id="edit-exerciseroutine-modal" class="reveal-modal small">
+  <h2>Edit this exercise.</h2>
+  <p class="lead">Change the sets, reps, or time. Or you can delete it.</p>
+  <a class="close-reveal-modal">&#215;</a>
+</div>
+<div id="new-routine-modal" class="reveal-modal small">
+  <h2>Add a routine.</h2>
+  <a class="close-reveal-modal">&#215;</a>
 </div>

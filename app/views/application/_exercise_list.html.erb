@@ -4,6 +4,8 @@
   <div class="row top" id="header-region">
     <div class="large 16 column menu">
         <h1><%= @routine.name %></h1>
+        <%= link_to "Edit", edit_routine_path(@routine), id: "edit-routine", 'data-reveal-id' => "edit-routine-modal", remote: true %>
+        <%= link_to "Delete", @routine, method: :delete, data: {confirm: "Are you sure?"}, remote: true %>
         <ul class="group">
           <!-- <li><a href="#" class="day">Day</a></li> -->
           <li><a href="/exercises" class="add">Add</a></li>
@@ -19,6 +21,8 @@
         <div class="sets"><span>Sets</span><h1><%= e.sets %></h1></div>
         <h2><%= e.name %></h2>
         <p>For a big chest, the best things you can do are heavy compound (multi-joint) movements. No matter if you're hitting a flat bench or an incline bench with dumbbells, you have to put extreme stress on the muscle fibers to make them grow.</p>
+        <a href="#" data-reveal-id="edit-exerciseroutine-modal">Edit</a>
+        <a href="#">Delete</a>
       </div>
     <% end %>
   </div>

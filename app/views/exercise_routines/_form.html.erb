@@ -1,0 +1,27 @@
+<%= form_for @exercise_routine do |f| %>
+  <% if @exercise_routine.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@exercise_routine.errors.count, "error") %> prohibited this exercise from being saved:</h2>
+      <ul>
+      <% @exercise_routine.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <div class="field">
+    <%= f.label :sets %><br />
+    <%= f.text_field :sets %>
+  </div>
+  <div class="field">
+    <%= f.label :reps %><br />
+    <%= f.text_field :reps %>
+  </div>
+  <div class="field">
+    <%= f.label :time %><br />
+    <%= f.text_field :time %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -2,13 +2,40 @@ class RoutinesController < ApplicationController
 
   def create
     @routine = Routine.new(params[:routine])
-    @routine.name = params[:name]
     @routine.user = current_user
     if @routine.save
       respond_to do |format|
-        format.html
-        format.json  { render :json => @routine }
+        format.html { redirect_to '/' }
+        format.js
       end
+    end
+  end
+
+  def new
+    @routine = Routine.new
+  end
+
+  def edit
+    @routine = Routine.find(params[:id])
+  end
+
+  def update
+    @routine = Routine.find(params[:id])
+    if @routine.update_attributes(params[:routine])
+      respond_to do |format|
+        format.html { redirect_to '/', notice: 'Routine Updated.' }
+        format.js
+      end
+    else
+      render 'edit'
+    end
+  end
+
+  def destroy
+    @routine = Routine.destroy(params[:id])
+    respond_to do |format|
+      format.html { redirect_to '/' }
+      format.js
     end
   end
 

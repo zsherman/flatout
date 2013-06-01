@@ -1,0 +1,4 @@
+var name = '<%= j @routine.name %>';
+var id = '<%= j @routine.id.to_s %>';
+$('.side-nav .add-new').before('<li class="routine new-routine" data-id="' + id + '"><i></i><a href="#">'+ name + '</a></li>');
+$('#edit-routine-modal').foundation('reveal', 'close');
