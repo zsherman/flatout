@@ -3,14 +3,19 @@
 <% else %>
   <div class="row top" id="header-region">
     <div class="large 16 column menu">
-        <h1><%= @routine.name %></h1>
-        <%= link_to "Edit", edit_routine_path(@routine), id: "edit-routine", 'data-reveal-id' => "edit-routine-modal", remote: true %>
-        <%= link_to "Delete", @routine, method: :delete, data: {confirm: "Are you sure?"}, remote: true %>
-        <ul class="group">
-          <!-- <li><a href="#" class="day">Day</a></li> -->
-          <li><a href="/exercises" class="add">Add</a></li>
-          <li><%= link_to "Start", start_path(@routine), :class => "start" %><!-- <a href="#" class="start">Start</a> --></li>
-        </ul>
+      <h1><%= @routine.name %>
+        <%= link_to edit_routine_path(@routine), id: "edit-routine",'data-reveal-id' => "edit-routine-modal", remote: true do %>
+          <i class="icon-cog"></i>
+        <% end %>
+        <%= link_to @routine, id:"delete-routine", method: :delete, data: {confirm: "Are you sure you want to delete this routine?"}, remote: true do %>
+          <i class="icon-remove"></i>
+        <% end %>
+      </h1>
+      <ul class="group">
+        <!-- <li><a href="#" class="day">Day</a></li> -->
+        <li><a href="/exercises" class="add">Add</a></li>
+        <li><%= link_to "Start", start_path(@routine), :class => "start" %><!-- <a href="#" class="start">Start</a> --></li>
+      </ul>
     </div>
   </div>
   <div id="exercise-region">
