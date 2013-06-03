@@ -427,7 +427,8 @@ div {
         height: 100%;
         width: 100%;
         background: url("https://dd5h05uy6fagm.cloudfront.net/assets/external-nav-customers-7f238e97ea8cd1a1dab332ccf33c7cc3.svg");
-        background-size: 60%;
+        background-size: 100%;
+        background-size: cover;
         background-repeat: no-repeat;
         background-position: 50px 20px;
       }

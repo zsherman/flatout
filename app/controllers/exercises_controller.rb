@@ -31,6 +31,10 @@ class ExercisesController < ApplicationController
     end
   end
 
+  def show
+    @exercise = Exercise.find(params[:id])
+  end
+
   def destroy
     @exercise = Exercise.find(params[:id])
     @exercise.destroy
