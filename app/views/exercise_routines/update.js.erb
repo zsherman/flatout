@@ -1,0 +1,7 @@
+var sets = '<%= j @exercise_routine.sets.to_s || @exercise_routine.exercise.sets.to_s %>';
+var reps = '<%= j @exercise_routine.reps.to_s || @exercise_routine.exercise.reps.to_s %>';
+var time = '<%= j @exercise_routine.time.to_s || @exercise_routine.exercise.time.to_s %>:00';
+$('#edit-exerciseroutine-modal').foundation('reveal', 'close');
+$("#exercise-region .exercise[data-exercise-id='<%= @exercise_routine.exercise.id %>'] .time h1").text(time);
+$("#exercise-region .exercise[data-exercise-id='<%= @exercise_routine.exercise.id %>'] .sets h1").text(sets);
+$("#exercise-region .exercise[data-exercise-id='<%= @exercise_routine.exercise.id %>'] .reps h1").text(reps);

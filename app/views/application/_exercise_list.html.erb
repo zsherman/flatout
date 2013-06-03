@@ -14,22 +14,29 @@
       <ul class="group">
         <!-- <li><a href="#" class="day">Day</a></li> -->
         <li><a href="/exercises" class="add">Add</a></li>
-        <li><%= link_to "Start", start_path(@routine), :class => "start" %><!-- <a href="#" class="start">Start</a> --></li>
+        <li><%= link_to "Start", start_path(@routine), :class => "start" %></li>
       </ul>
     </div>
   </div>
   <div id="exercise-region">
-    <% @exercises.each do |e| %>
-      <div class="row exercise">
+    <% @exercise_routines.each do |e| %>
+      <div class="row exercise" data-exercise-id="<%= e.exercise.id %>">
         <div class="cover-image"></div>
-        <div class="reps"><span>Reps</span><h1><%= e.reps %></h1></div>
-        <div class="sets"><span>Sets</span><h1><%= e.sets %></h1></div>
-        <h2><%= e.name %></h2>
-        <p>For a big chest, the best things you can do are heavy compound (multi-joint) movements. No matter if you're hitting a flat bench or an incline bench with dumbbells, you have to put extreme stress on the muscle fibers to make them grow.</p>
-        <%= link_to change_exercise_routines_path(exercise_id: e.id, routine_id: @routine.id), id: "edit-routine",'data-reveal-id' => "edit-exerciseroutine-modal", remote: true do %>
-          <i class="icon-cog"></i>
+        <% if e.exercise.cardio == true %>
+          <div class="time"><span>Time</span><h1><%= e.time || e.exercise.time %>:00</h1></div>
+        <% else %>
+          <div class="reps"><span>Reps</span><h1><%= e.reps || e.exercise.reps %></h1></div>
+          <div class="sets"><span>Sets</span><h1><%= e.sets || e.exercise.sets %></h1></div>
         <% end %>
-        <a href="#">Delete</a>
+        <h2><%= e.exercise.name %>
+          <%= link_to edit_exercise_routine_path(e), id: "edit-exercise-routine",'data-reveal-id' => "edit-exerciseroutine-modal", remote: true do %>
+            <i class="icon-cog"></i>
+          <% end %>
+          <%= link_to e, id:"delete-exercise-routine", method: :delete, data: {confirm: "Are you sure you want to delete this exercise?"}, remote: true do %>
+            <i class="icon-remove"></i>
+          <% end %>
+        </h2>
+        <p>For a big chest, the best things you can do are heavy compound (multi-joint) movements. No matter if you're hitting a flat bench or an incline bench with dumbbells, you have to put extreme stress on the muscle fibers to make them grow.</p>
       </div>
     <% end %>
   </div>

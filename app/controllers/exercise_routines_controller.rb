@@ -15,14 +15,28 @@ class ExerciseRoutinesController < ApplicationController
     redirect_to root_path
   end
 
-  def change
-    @exercise_routine = ExerciseRoutine.where(:exercise_id => params[:exercise_id], :routine_id => params[:routine_id]).first
-    logger.info "<==============Exercise Routine Info==============>"
-    logger.info @exercise_routine
+  def edit
+    @exercise_routine = ExerciseRoutine.find(params[:id])
   end
 
   def update
+    @exercise_routine = ExerciseRoutine.find(params[:id])
+    if @exercise_routine.update_attributes(params[:exercise_routine])
+      respond_to do |format|
+        format.html { redirect_to '/', notice: 'Exercise Updated.' }
+        format.js
+      end
+    else
+      render 'edit'
+    end
+  end
 
+  def destroy
+    @exercise_routine = ExerciseRoutine.destroy(params[:id])
+    respond_to do |format|
+      format.html { redirect_to '/' }
+      format.js
+    end
   end
 
 end

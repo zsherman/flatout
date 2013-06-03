@@ -29,6 +29,17 @@ div {
       display: inline;
       font-family: 'proxima-nova', 'helvetica-neue';
       color: #363945;
+
+      a {
+        color: #363945;
+        font-size: 14px;
+        position: relative;
+        bottom: 2px;
+
+        &:hover {
+          color: #2ba6cb;
+        }
+      }
     }
 
     p {
@@ -42,7 +53,7 @@ div {
       color: #7C858E;
     }
 
-    .sets, .reps {
+    .sets, .reps, .time {
       float: right;
       height: 90px;
       width: 75px;
@@ -65,6 +76,11 @@ div {
         font-weight: 500;
         color: #37373A;
       }
+    }
+
+    .time {
+      width: auto;
+      padding: 0 10px;
     }
 
     @media only screen and (max-width: 620px) {
