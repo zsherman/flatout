@@ -16,6 +16,10 @@ div {
     margin-top: 10px;
     margin-bottom: 10px;
 
+    &:hover h2 a {
+      display: inline;
+    }
+
     .cover-image {
       width: 100px;
       height: 100px;
@@ -28,13 +32,14 @@ div {
       font-size: 28px;
       display: inline;
       font-family: 'proxima-nova', 'helvetica-neue';
-      color: #363945;
+      color: #4e505b;
 
       a {
-        color: #363945;
+        color: #4e505b;
         font-size: 14px;
         position: relative;
         bottom: 2px;
+        display: none;
 
         &:hover {
           color: #2ba6cb;
