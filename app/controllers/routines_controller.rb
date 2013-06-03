@@ -54,7 +54,7 @@ class RoutinesController < ApplicationController
 
   def render_partial
     @routine = Routine.find(params[:id])
-    @exercises = @routine.exercises
+    @exercise_routines = @routine.exercise_routines
     render :json => {
       :html => render_to_string({
         :partial => "exercise_list",
