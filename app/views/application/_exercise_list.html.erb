@@ -26,7 +26,7 @@
         <div class="sets"><span>Sets</span><h1><%= e.sets %></h1></div>
         <h2><%= e.name %></h2>
         <p>For a big chest, the best things you can do are heavy compound (multi-joint) movements. No matter if you're hitting a flat bench or an incline bench with dumbbells, you have to put extreme stress on the muscle fibers to make them grow.</p>
-        <%= link_to edit_exercise_routine_path(@routine), id: "edit-routine",'data-reveal-id' => "edit-exerciseroutine-modal", remote: true do %>
+        <%= link_to change_exercise_routines_path(exercise_id: e.id, routine_id: @routine.id), id: "edit-routine",'data-reveal-id' => "edit-exerciseroutine-modal", remote: true do %>
           <i class="icon-cog"></i>
         <% end %>
         <a href="#">Delete</a>

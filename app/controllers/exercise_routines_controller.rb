@@ -15,4 +15,14 @@ class ExerciseRoutinesController < ApplicationController
     redirect_to root_path
   end
 
+  def change
+    @exercise_routine = ExerciseRoutine.where(:exercise_id => params[:exercise_id], :routine_id => params[:routine_id]).first
+    logger.info "<==============Exercise Routine Info==============>"
+    logger.info @exercise_routine
+  end
+
+  def update
+
+  end
+
 end

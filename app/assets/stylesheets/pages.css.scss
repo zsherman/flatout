@@ -116,6 +116,10 @@ div {
         position: relative;
         bottom: 3px;
         display: inline;
+
+        &:hover {
+          color: #2ba6cb;
+        }
       }
 
       a.edit-routine {

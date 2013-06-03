@@ -8,6 +8,7 @@ Flatout::Application.routes.draw do
   resources :exercise_routines do
     collection do
       post :batch
+      get :change
     end
   end
   match 'routines/:id/start', to: 'routines#start', :as => 'start'

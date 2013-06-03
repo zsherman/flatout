@@ -7,6 +7,7 @@ class PagesController < ApplicationController
     unless @routines.empty?
       @routine = @routines.first
       @exercises = @routine.exercises
+      #@exercise_routines = @routine.exercise_routines
     end
   end
 
