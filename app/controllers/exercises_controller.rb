@@ -2,7 +2,7 @@ class ExercisesController < ApplicationController
 
   def index
     @exercises = Exercise.all
-    @routines = current_user.routines
+    @routines = current_user.routines.where(:author_id => current_user.id)
     logger.info '<=======Routines========>'
     logger.info @routines
   end
