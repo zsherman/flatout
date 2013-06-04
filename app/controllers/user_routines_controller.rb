@@ -10,4 +10,12 @@ class UserRoutinesController < ApplicationController
     end
   end
 
+  def destroy
+    @user_routine = UserRoutine.destroy(params[:id])
+    respond_to do |format|
+      format.html { redirect_to '/' }
+      format.js
+    end
+  end
+
 end

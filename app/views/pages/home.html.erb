@@ -7,7 +7,7 @@
         <li class="settings"><i></i><a href="#">Settings</a></li>
         <li class="divider"></li>
         <% @user_routines.each do |r| %>
-          <li class="routine" data-id="<%= r.id %>"><i></i><a href="#">
+          <li class="routine" data-id="<%= r.routine.id %>"><i></i><a href="#">
             <%= r.name || r.routine.name %>
           </a></li>
         <% end %>

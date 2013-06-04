@@ -5,6 +5,7 @@ class PagesController < ApplicationController
     @user = current_user
     @user_routines = @user.user_routines
     unless @user_routines.empty?
+      @user_routine = @user_routines.first
       @routine = @user_routines.first.routine
       @exercise_routines = @routine.exercise_routines
     end

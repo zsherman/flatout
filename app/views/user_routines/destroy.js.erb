@@ -1,0 +1,4 @@
+next = $("li[data-id='<%= @user_routine.routine.id %>']").next('li');
+$("li[data-id='<%= @user_routine.routine.id %>']").remove();
+$('#exercise-list').empty();
+$('li.routine a').first().trigger('click');

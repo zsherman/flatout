@@ -2,6 +2,7 @@ class RoutinesController < ApplicationController
 
   def create
     @routine = Routine.new(params[:routine])
+    @routine.author_id = current_user.id
     if @routine.save
       @user_routine = UserRoutine.new(:user_id => current_user.id, :routine_id => @routine.id)
       if @user_routine.save
@@ -56,11 +57,12 @@ class RoutinesController < ApplicationController
 
   def render_partial
     @routine = Routine.find(params[:id])
+    @user_routine = UserRoutine.where(:routine_id => @routine.id, :user_id => current_user.id).first
     @exercise_routines = @routine.exercise_routines
     render :json => {
       :html => render_to_string({
         :partial => "exercise_list",
-        :locals => {:routine => @routine}
+        :locals => {:routine => @routine, :user_routine => @user_routine}
       })
     }
   end
