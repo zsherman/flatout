@@ -16,4 +16,8 @@ class PagesController < ApplicationController
     @routines = current_user.routines
   end
 
+  def workouts
+    @workouts = Routine.where(:featured => true)
+  end
+
 end

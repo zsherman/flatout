@@ -450,6 +450,13 @@ div {
       font-size: 16px;
       font-family: 'proxima-nova';
       color: #525353;
+      display: inline-block;
+    }
+
+    a {
+      position: relative;
+      top: 1px;
+      left: 2px;
     }
 
     p {
