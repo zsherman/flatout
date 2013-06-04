@@ -21,7 +21,7 @@
   <div id="exercise-region">
     <% @exercise_routines.each do |e| %>
       <div class="row exercise" data-exercise-id="<%= e.exercise.id %>">
-        <div class="cover-image"></div>
+        <div class="cover-image" style="background:url('<%=e.exercise.img_url%>'); background-repeat: no-repeat; background-position: center; background-size: cover; border-radius: 5px;"></div>
         <% if e.exercise.cardio == true %>
           <div class="time"><span>Time</span><h1><%= e.time || e.exercise.time %>:00</h1></div>
         <% else %>
