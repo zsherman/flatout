@@ -6,8 +6,10 @@
         <li class="activity"><i></i><a href="#">Activity</a></li>
         <li class="settings"><i></i><a href="#">Settings</a></li>
         <li class="divider"></li>
-        <% @routines.each do |r| %>
-          <li class="routine" data-id="<%= r.id %>"><i></i><a href="#"><%= r.name %></a></li>
+        <% @user_routines.each do |r| %>
+          <li class="routine" data-id="<%= r.id %>"><i></i><a href="#">
+            <%= r.name || r.routine.name %>
+          </a></li>
         <% end %>
         <li class="add-new"><i></i><%= link_to "Add New", new_routine_path, id: "new-routine", 'data-reveal-id' => "new-routine-modal", remote: true %></li>
       </ul>

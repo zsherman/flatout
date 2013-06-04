@@ -3,9 +3,9 @@ class PagesController < ApplicationController
 
   def home
     @user = current_user
-    @routines = @user.routines
-    unless @routines.empty?
-      @routine = @routines.first
+    @user_routines = @user.user_routines
+    unless @user_routines.empty?
+      @routine = @user_routines.first.routine
       @exercise_routines = @routine.exercise_routines
     end
   end
