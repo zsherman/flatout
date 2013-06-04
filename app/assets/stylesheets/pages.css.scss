@@ -514,16 +514,6 @@ div {
   }
 }
 
-#workouts {
-
-  .workout {
-    height: 175px;
-    background: #fff;
-    margin-bottom: 20px;
-  }
-
-}
-
 #start-routine {
 
   .routine {
@@ -680,5 +670,52 @@ div {
   }
 }
 
+#workouts {
+
+  .workout {
+    min-height: 130px;
+    overflow: hidden;
+    border: 5px solid #edf1f2;
+    background: #fff;
+    margin-bottom: 20px;
+
+    .wrapper {
+
+      display: block;
+      margin-top: 10px;
+
+      .cover-image {
+        float: left;
+        height: 110px;
+        width: 110px;
+      }
+
+      h3 {
+        line-height: 15px;
+        display: inline-block;
+        margin-left: 20px;
+        margin-top: 0px;
+        font-weight: 600;
+        font-family: proxima-nova;
+        font-size: 24px;
+        color: #353535;
+
+        a {
+          font-size: 14px;
+          position: relative;
+          left: 3px;
+          bottom: 1px;
+        }
+      }
+
+      p {
+        padding-left: 130px;
+        font-size: 13px;
+        font-family: proxima-nova;
+        color: #3C3C3C;
+      }
+    }
+  }
+}
 
 

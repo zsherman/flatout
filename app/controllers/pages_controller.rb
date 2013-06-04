@@ -6,7 +6,6 @@ class PagesController < ApplicationController
     @routines = @user.routines
     unless @routines.empty?
       @routine = @routines.first
-      #@exercises = @routine.exercises
       @exercise_routines = @routine.exercise_routines
     end
   end
@@ -18,6 +17,7 @@ class PagesController < ApplicationController
 
   def workouts
     @workouts = Routine.where(:featured => true)
+    @user_workouts = current_user.routines
   end
 
 end

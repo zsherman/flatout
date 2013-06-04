@@ -3,6 +3,8 @@ class ExercisesController < ApplicationController
   def index
     @exercises = Exercise.all
     @routines = current_user.routines
+    logger.info '<=======Routines========>'
+    logger.info @routines
   end
 
   def new

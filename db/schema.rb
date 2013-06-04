@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130604123214) do
+ActiveRecord::Schema.define(:version => 20130604141030) do
 
   create_table "exercise_routines", :force => true do |t|
     t.integer  "exercise_id"
@@ -33,13 +33,15 @@ ActiveRecord::Schema.define(:version => 20130604123214) do
     t.boolean  "cardio"
     t.text     "description"
     t.string   "img_url"
+    t.text     "tips"
   end
 
   create_table "routines", :force => true do |t|
     t.string   "name"
-    t.datetime "created_at",                    :null => false
-    t.datetime "updated_at",                    :null => false
-    t.boolean  "featured",   :default => false
+    t.datetime "created_at",                     :null => false
+    t.datetime "updated_at",                     :null => false
+    t.boolean  "featured",    :default => false
+    t.text     "description"
   end
 
   create_table "user_routines", :force => true do |t|

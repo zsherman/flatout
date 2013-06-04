@@ -2,11 +2,13 @@ class RoutinesController < ApplicationController
 
   def create
     @routine = Routine.new(params[:routine])
-    @user_routine = UserRoutine.new(:user => current_user, :routine => @routine)
-    if @routine.save && @user_routine.save
-      respond_to do |format|
-        format.html { redirect_to '/' }
-        format.js
+    if @routine.save
+      @user_routine = UserRoutine.new(:user_id => current_user.id, :routine_id => @routine.id)
+      if @user_routine.save
+        respond_to do |format|
+          format.html { redirect_to '/' }
+          format.js
+        end
       end
     end
   end
