@@ -3,15 +3,17 @@
     <% @workouts.each do |workout| %>
       <div class="large-8 columns workout" data-id="<%=workout.id%>">
         <div class="wrapper group">
-          <div class="cover-image" style="background: url('<%= workout.exercises.first.img_url %>'); background-size: cover;"></div>
+          <%= link_to routine_path(workout) do %>
+            <div class="cover-image" style="background: url('<%= workout.exercises.first.img_url %>'); background-size: cover;"></div>
+          <% end %>
           <h3>
-            <%= workout.name %>
+            <%= link_to workout.name, routine_path(workout), class: "name" %>
             <% if !@user_workouts.include?(workout) %>
-              <%= link_to user_routines_path(:routine_id => workout.id), {:action => :create, :method => :post, remote: true, data: {confirm: "Add this to your routines?"}} do %>
+              <%= link_to user_routines_path(:routine_id => workout.id), {:action => :create, :method => :post, remote: true, data: {confirm: "Add this to your routines?"}, :class => "check"} do %>
                 <i class="icon-plus-sign"></i>
               <% end %>
             <% else %>
-              <a href="#"><i class="icon-check-sign" style="color: #28BFA4;"></i></a>
+              <a href="#" class="check"><i class="icon-check-sign" style="color: #28BFA4;"></i></a>
             <% end %>
           </h3>
           <p>Pull-ups work arm and back muscles, giving you great bang for your buck. Turn palms away to work more back muscles; or have the palms face you to target the biceps. Grasp the chin-up bar and cross your legs to keep the lower body stable.</p>

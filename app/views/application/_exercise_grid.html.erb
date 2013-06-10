@@ -1,0 +1,44 @@
+<div class="row" id="exercises">
+  <div class="large-16 columns">
+    <% @exercises.each do |exercise| %>
+      <div class="large-4 small-8 columns exercise-container">
+        <div class="exercise">
+          <div class="exercise-content-wrapper" data-exercise-id="<%= exercise.id %>">
+            <section class="top">
+              <div class="exercise-image" style="background:url('<%=exercise.img_url%>'); background-repeat: no-repeat; background-position: center; background-size: cover;"></div>
+            </section>
+            <div class="top-color"></div>
+            <h2 class="exercise-name">
+              <i class="icon-plus-sign plus"></i>
+              <%= exercise.name %>
+            </h2>
+            <div class="bottom-section">
+              <i class="icon-remove-circle close"></i>
+              <h3><%= exercise.name %></h3>
+              <a href="#" data-reveal-id="exercise-modal" class="show-list"><i class="icon-plus-sign"></i></a>
+              <p><%= exercise.description %></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
+<div id="exercise-modal" class="reveal-modal small">
+  <div class="wrap">
+  <h2>Add this to a routine.</h2>
+  <p class="lead">Select which routines to add this exercise to.</p>
+    <%= form_tag batch_exercise_routines_path, method: :post, remote: true do %>
+      <ul>
+        <% @routines.each do |routine| %>
+          <% if routine.author_id == current_user.id %>
+            <li><%= routine.name %><%= check_box_tag "routine_ids[]", routine.id %></li>
+          <% end %>
+        <% end %>
+      </ul>
+      <%= hidden_field_tag :exercise_id, 1 %>
+      <%= submit_tag "Submit" %>
+    <% end %>
+  </div>
+  <a class="close-reveal-modal">&#215;</a>
+</div>

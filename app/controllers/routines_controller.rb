@@ -44,6 +44,8 @@ class RoutinesController < ApplicationController
 
   def show
     @routine = Routine.find(params[:id])
+    @routines = current_user.routines
+    @exercises = @routine.exercises
     respond_to do |format|
       format.html
       format.json { render :json => @routine }

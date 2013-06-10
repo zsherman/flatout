@@ -12,7 +12,10 @@ class ExerciseRoutinesController < ApplicationController
     routines.each do |routine|
       ExerciseRoutine.create(:routine_id => routine, :exercise_id => exercise_id)
     end
-    redirect_to root_path
+    respond_to do |format|
+      format.html { redirect_to '/', notice: 'Exercise Added.' }
+      format.js
+    end
   end
 
   def edit

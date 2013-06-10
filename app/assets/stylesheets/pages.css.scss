@@ -434,6 +434,19 @@ div {
       }
     }
 
+    .bottom-section {
+      position: relative;
+
+      i.close {
+        color: #D1D6D6;
+        font-size: 22px;
+        position: absolute;
+        top: -4px;
+        left: 6px;
+        cursor: pointer;
+      }
+    }
+
     h2 {
       font-family: 'proxima-nova', 'helvetica-neue';
       font-size: 18px;
@@ -444,6 +457,16 @@ div {
       height: 50px;
       margin-top: 0px;
       padding-top: 10px;
+      position: relative;
+
+      i {
+        color: #fff;
+        font-size: 16px;
+        position: absolute;
+        right: 15px;
+        top: 14px;
+        cursor: pointer;
+      }
     }
 
     h3 {
@@ -672,6 +695,10 @@ div {
 
 #workouts {
 
+  #workout-header {
+    background: #fff;
+  }
+
   .workout {
     min-height: 130px;
     overflow: hidden;
@@ -693,17 +720,23 @@ div {
       h3 {
         line-height: 15px;
         display: inline-block;
-        margin-left: 20px;
+        margin-left: 19px;
         margin-top: 0px;
         font-weight: 600;
         font-family: proxima-nova;
-        font-size: 24px;
+        font-size: 20px;
         color: #353535;
+        margin-bottom: 5px;
 
-        a {
+        .name {
+          color: #353535;
+          font-size: 20px;
+        }
+
+        a.check {
           font-size: 14px;
           position: relative;
-          left: 3px;
+          left: 2px;
           bottom: 1px;
         }
       }
